@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="EasyLog">
+      <UniqueIdentifier>{2a2ade43-6626-4234-9c30-03f501b43dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{7f1354fe-dffd-42bd-b857-9b6d1eac8236}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Util\LogUtil.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyLog.h">
+      <Filter>EasyLog</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EasyLog.cpp">
+      <Filter>EasyLog</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

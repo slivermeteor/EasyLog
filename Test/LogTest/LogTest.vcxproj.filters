@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LogTest">
+      <UniqueIdentifier>{5e2e033e-5377-4edd-af55-fc34e8869138}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LogTestMain.cpp">
+      <Filter>LogTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
