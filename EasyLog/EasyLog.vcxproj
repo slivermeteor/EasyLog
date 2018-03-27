@@ -149,6 +149,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Common\Format.hpp" />
     <ClInclude Include="..\Common\Singleton.hpp" />
     <ClInclude Include="EasyLog.h" />
     <ClInclude Include="Util\LogUtil.h" />

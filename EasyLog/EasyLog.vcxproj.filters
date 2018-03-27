@@ -24,6 +24,9 @@
     <ClInclude Include="Util\LogUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\Format.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EasyLog.cpp">
