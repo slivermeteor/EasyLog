@@ -1,6 +1,5 @@
 #include "EasyLog.h"
-#include "LogUtil.hpp"
-
+#include "LogUtil.h"
 #ifdef _WIN32
 #include <windows.h>
 #include <Shlwapi.h>
@@ -91,7 +90,12 @@ LOG_RESULT CEasyLog::InitLog(std::wstring& LogPath, std::wstring& LogFileName)
 	return LogResult;
 }
 
-LOG_RESULT CEasyLog::WriteLog(LOG_TYPE LogType, wstring & LogMsg)
+LOG_RESULT CEasyLog::WriteLog(LOG_TYPE LogType, string LogMsg)
+{
+	return WriteLog(LogType, str2wstr(LogMsg));
+}
+
+LOG_RESULT CEasyLog::WriteLog(LOG_TYPE LogType, wstring LogMsg)
 {
 	LOG_RESULT LogResult = {};
 	// LogStream Œ¥≥ı ºªØ

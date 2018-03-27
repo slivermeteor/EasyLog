@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-#include "LogUtil.hpp"
+#include <codecvt>
 
 std::wstring FormatLog()
 {
@@ -20,7 +20,8 @@ std::wstring FormatLog(const wchar_t* Arg, Ts... Args)
 template <typename ... Ts>
 std::wstring FormatLog(const char* Arg, Ts... Args)
 {
-	wstring wstr(str2wstr(std::string(Arg)));
+	std::wstring_convert<std::codecvt<wchar_t, char, std::mbstate_t>>  Convert;
+	wstring wstr(Convert.from_bytes(std::string(Arg)));
 	return wstr + FormatLog(Args...);
 }
 

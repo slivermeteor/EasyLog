@@ -1,10 +1,5 @@
 #pragma once
-
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <codecvt>
-#include <ctime>
+#include "LogUtil.h"
 
 std::wstring str2wstr(std::string& str)
 {	

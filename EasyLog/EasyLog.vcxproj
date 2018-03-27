@@ -149,11 +149,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Common\Singleton.hpp" />
     <ClInclude Include="EasyLog.h" />
-    <ClInclude Include="Util\LogUtil.hpp" />
+    <ClInclude Include="Util\LogUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EasyLog.cpp" />
+    <ClCompile Include="Util\LogUtil.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

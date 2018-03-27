@@ -5,6 +5,7 @@
 #include <ctime>
 #include "Singleton.hpp"
 
+
 enum LOG_TYPE
 {
 	LOG_INFO = 0,
@@ -60,7 +61,8 @@ public:
 		@param LogType Log 类型
 		@param LogMsg Log 消息
 	*/
-	LOG_RESULT WriteLog(LOG_TYPE LogType, std::wstring& LogMsg);
+	LOG_RESULT WriteLog(LOG_TYPE LogType, std::wstring LogMsg);
+	LOG_RESULT WriteLog(LOG_TYPE LogType, std::string LogMsg);
 
 private:
 	// 私有成员变量
@@ -75,3 +77,4 @@ private:
 };
 
 #define WriteEasyLog(Type, Msg) CEasyLog::GetInstance()->WriteLog(Type, Msg);
+

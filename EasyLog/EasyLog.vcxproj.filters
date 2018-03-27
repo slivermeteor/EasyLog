@@ -7,21 +7,30 @@
     <Filter Include="EasyLog">
       <UniqueIdentifier>{2a2ade43-6626-4234-9c30-03f501b43dbc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8ba8a2ac-17d5-4da1-a21d-c989a43f2f10}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Util">
-      <UniqueIdentifier>{7f1354fe-dffd-42bd-b857-9b6d1eac8236}</UniqueIdentifier>
+      <UniqueIdentifier>{baaedd4f-eecc-437a-b4bd-d6cf0a72ff79}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Util\LogUtil.hpp">
-      <Filter>Util</Filter>
-    </ClInclude>
     <ClInclude Include="EasyLog.h">
       <Filter>EasyLog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Singleton.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\LogUtil.h">
+      <Filter>Util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EasyLog.cpp">
       <Filter>EasyLog</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\LogUtil.cpp">
+      <Filter>Util</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
