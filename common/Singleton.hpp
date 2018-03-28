@@ -27,6 +27,20 @@ public:
 		return Temp;
 	}
 
+	static void SetInstance(T* Instance)
+	{
+		T* Temp = s_Instance.load();
+		if (Temp == nullptr)
+		{
+			std::lock_guard<std::mutex> lock(m_Mutex);
+			Temp = s_Instance.load();
+			if (Temp == nullptr)
+			{
+				s_Instance.store(Instance);
+			}
+		}
+	}
+
 protected:
 	SingletonFactory<T>() { }
 	~SingletonFactory<T>() { }

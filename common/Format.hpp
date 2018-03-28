@@ -9,6 +9,20 @@ std::wstring FormatLog()
 	return std::wstring();
 }
 
+template <typename ... Ts>
+std::wstring FormatLog(wchar_t Arg, Ts... Args)
+{
+	return wstring(1, Arg) + FormatLog(Args...);
+}
+
+template <typename ... Ts>
+std::wstring FormatLog(char Arg, Ts... Args)
+{
+	std::wstring_convert<std::codecvt<wchar_t, char, std::mbstate_t>>  Convert;
+	wstring wstr(Convert.from_bytes(std::string(1, Arg)));
+	return wstr + FormatLog(Arg...);
+}
+
 // wchar_t жиди
 template <typename ... Ts>
 std::wstring FormatLog(const wchar_t* Arg, Ts... Args)
