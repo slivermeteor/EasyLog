@@ -14,7 +14,7 @@ public:
 		T* Temp = s_Instance.load();
 		if (Temp == nullptr)
 		{
-			std::lock_guard<std::mutex> lock(m_Mutex);
+			std::unique_lock<std::mutex> lock(m_Mutex);
 			Temp = s_Instance.load();
 			if (Temp == nullptr)
 			{
@@ -32,7 +32,7 @@ public:
 		T* Temp = s_Instance.load();
 		if (Temp == nullptr)
 		{
-			std::lock_guard<std::mutex> lock(m_Mutex);
+			std::unique_lock<std::mutex> lock(m_Mutex);
 			Temp = s_Instance.load();
 			if (Temp == nullptr)
 			{
