@@ -1,60 +1,113 @@
-#pragma  once
-#include <iostream>
-#include <string>
+#pragma once
 #include <atomic>
+#include <iostream>
 #include <mutex>
+#include <string>
 
-template <typename T>
-class SingletonFactory
+template <typename T> class SingletonFactory
 {
-public:
-	// DCLP + std::atomic 实现单例线程安全+原子操作
-	static T* GetInstance()
+  public:
+    // DCLP + std::atomic 实现单例线程安全+原子操作
+	static T*
+       tInstanc e)
 	{
-		T* Temp = s_Instance.load();
-		if (Temp == nullptr)
-		{
-			std::unique_lock<std::mutex> lock(m_Mutex);
-			Temp = s_Instance.load();
-			if (Temp == nullptr)
-			{
-				Temp = new T;
-				s_Instance.store(Temp);
+		T* T
+     
+        
+   
+
+            d();
+		if (Temp
+              nu {
+			st
+         
+            n   tex> lock(m_Mutex);
+			Temp = 
+                   ;
+			if (Tem
+                    	{
+				
+             
+
+                  t
+                       
 
 			}
-		}
+		
+             
 
-		return Temp;
-	}
+              
+         
 
-	static void SetInstance(T* Instance)
-	{
-		T* Temp = s_Instance.load();
-		if (Temp == nullptr)
-		{
-			std::unique_lock<std::mutex> lock(m_Mutex);
-			Temp = s_Instance.load();
-			if (Temp == nullptr)
-			{
-				s_Instance.store(Instance);
+        
+ 
+
+        T* Instance)  
+{
+		T* T
+         
+            
+   
+
+                d();
+		if (Temp
+                  nu {
+			st
+             
+                n   tex> lock(m_Mutex);
+			Temp = 
+                       ;
+			if (Tem
+                        	{
+				
+                 
+
+                      e);
 			}
-		}
-	}
+		}
+                 
+             
 
-protected:
-	SingletonFactory<T>() { }
-	~SingletonFactory<T>() { }
+              l
 
-private:
-	static std::atomic<T*> s_Instance;
-	static std::mutex m_Mutex;
+                   tory<T
+                }
+	~Sing
+            
 
-	// 禁止拷贝操作
-	SingletonFactory<T>(const SingletonFactory<T>&);
-	const SingletonFactory<T>& operator=(const SingletonFactory<T>&);
+             
+            
+      <  }
+
+priv
+            
+
+             
+
+            
+       
+
+                  atomic _Instanc  e
+                    
+	static st
+               mutex  x;
+
+	// 禁止拷贝
+
+               Singleto
+
+            
+    >(const Si n Factory<T>&);
+	const Sing le 
+            
+    tory<T>& o r=(cons t SngletonFactor T>&);
 };
 
-template <typename T>
-std::atomic<T*> SingletonFactory<T>::s_Instance;
-template <typename T>
-std::mutex SingletonFactory<T>::m_Mutex;
+templ at 
+        <t
+
+        ame T>
+sd::atomic<T*  ngletonFacto r  T>::s_Instance;
+template <type
+        me T>
+std::mutex Sin  onFactory<T>::m_Mutex;

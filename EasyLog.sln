@@ -1,22 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EasyLog", "EasyLog\EasyLog.vcxproj", "{657311AF-0B59-4DFF-B1CE-29F558270A1D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{02779B42-D9CA-4DE3-B8FC-DCD0615EA046}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogTest", "Test\LogTest\LogTest.vcxproj", "{D11BE63F-1724-473F-8556-888593A3A7A5}"
-	ProjectSection(ProjectDependencies) = postProject
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D} = {657311AF-0B59-4DFF-B1CE-29F558270A1D}
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{908D9B6A-6295-46B0-85CD-5576F88F28C7}"
 	ProjectSection(SolutionItems) = preProject
 		readme-zh.md = readme-zh.md
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EasyLog", "EasyLog\EasyLog.vcxproj", "{E1ACC90E-208A-4907-BB34-E2FBC568627E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,14 +23,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Debug|x64.ActiveCfg = Debug|x64
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Debug|x64.Build.0 = Debug|x64
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Debug|x86.ActiveCfg = Debug|Win32
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Debug|x86.Build.0 = Debug|Win32
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Release|x64.ActiveCfg = Release|x64
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Release|x64.Build.0 = Release|x64
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Release|x86.ActiveCfg = Release|Win32
-		{657311AF-0B59-4DFF-B1CE-29F558270A1D}.Release|x86.Build.0 = Release|Win32
 		{D11BE63F-1724-473F-8556-888593A3A7A5}.Debug|x64.ActiveCfg = Debug|x64
 		{D11BE63F-1724-473F-8556-888593A3A7A5}.Debug|x64.Build.0 = Debug|x64
 		{D11BE63F-1724-473F-8556-888593A3A7A5}.Debug|x86.ActiveCfg = Debug|Win32
@@ -42,11 +31,22 @@ Global
 		{D11BE63F-1724-473F-8556-888593A3A7A5}.Release|x64.Build.0 = Release|x64
 		{D11BE63F-1724-473F-8556-888593A3A7A5}.Release|x86.ActiveCfg = Release|Win32
 		{D11BE63F-1724-473F-8556-888593A3A7A5}.Release|x86.Build.0 = Release|Win32
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Debug|x64.ActiveCfg = Debug|x64
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Debug|x64.Build.0 = Debug|x64
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Debug|x86.ActiveCfg = Debug|Win32
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Debug|x86.Build.0 = Debug|Win32
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Release|x64.ActiveCfg = Release|x64
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Release|x64.Build.0 = Release|x64
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Release|x86.ActiveCfg = Release|Win32
+		{E1ACC90E-208A-4907-BB34-E2FBC568627E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D11BE63F-1724-473F-8556-888593A3A7A5} = {02779B42-D9CA-4DE3-B8FC-DCD0615EA046}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D8996DD-4E2D-455D-BA6B-66098B194FA5}
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
+#include <format>
 #include "EasyLog.h"
-#include "Format.hpp"
 
 using namespace std;
 
