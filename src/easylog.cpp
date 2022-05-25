@@ -12,17 +12,12 @@
  * <tr><td>2022Äê5ÔÂ15ÈÕ  <td>1.0      <td>slivermteor  <td>create
  * </table>
  */
-#include <string>
-
+#include "include/easylog.h"
 #include "ezlog_impl.h"
 
-namespace ezlog {
+using namespace ezlog;
 
-	bool ezlog::init_ezlog(const EzlogConfig& init_config)
-	{
-		return false;
-	}
-
-
-
-};
+bool ezlog::init_ezlog(const EzlogConfig& init_config)
+{
+	return EzLog::inst()->InitLog(init_config);
+}

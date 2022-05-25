@@ -16,20 +16,9 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include "include/easylog.h"
 
 namespace ezlog {
-	struct EzlogConfig {
-		std::wstring log_dir;
-		std::wstring log_fname;
-		// todo: encrypt config
-	};
-
-	enum class EzlogError {
-		success = 0,
-		create_log_path_failed,
-		open_log_file_failed,
-	};
-
 	namespace std_fs = std::filesystem;
 	namespace std_time = std::chrono;
 
@@ -38,18 +27,33 @@ namespace ezlog {
 
 	public:
 		~EzLog();
+		static EzLog* inst();
 		bool InitLog(const EzlogConfig& ezlog_config);
+		void SetLogLevel(EzlogLevel _log_level);
+
+		template <typename S, typename... Args>
+		bool log(const S& format_str, Args&&... args);
+
 	protected:
 		void set_error(EzlogError e);
+		EzLog();
+		EzLog(const EzLog&) = delete;
+		EzLog& operator=(const EzLog&) = delete;
 
 	private:
-
 		EzlogError last_error_ = EzlogError::success;
+		EzlogLevel log_level_ = EzlogLevel::kDebugLog;
 		std_fs::path			log_path_;
 		std_fs::path			log_full_path_;
 		std::ofstream			log_stream;
 
-	private:
-		EzLog();
+		static std::unique_ptr<EzLog> s_instance;
+		static std::once_flag s_init_flag;
 	};
+
+	template<typename S, typename ...Args>
+	inline bool EzLog::log(const S& format_str, Args && ...args)
+	{
+		return false;
+	}
 };
