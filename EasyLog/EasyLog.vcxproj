@@ -155,13 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\easylog.h" />
-    <ClInclude Include="..\src\ezlog_impl.h" />
-    <ClInclude Include="..\src\utils\ezlog_utils.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\easylog.cpp" />
-    <ClCompile Include="..\src\ezlog_impl.cpp" />
+    <ClInclude Include="..\include\easylog.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
